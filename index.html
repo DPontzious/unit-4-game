@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+    <h1> Number to guess <span id="compChoice"></span></h1>
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+
+                <img id="box1" class="box" src="assets/images/marioblock.jpeg" alt="flower">
+
+            </div>
+
+
+
+            <div class="col">
+                <img id="box2" class="box" src="assets/images/marioblock.jpeg" alt="flower">
+            </div>
+
+
+            <div class="col">
+                <img id="box3" class="box" src="assets/images/marioblock.jpeg" alt="flower">
+            </div>
+
+            <div class="col">
+                <img id="box4" class="box" src="assets/images/marioblock.jpeg" alt="flower">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
+                <div class="row">
+                    <p>
+                        Number to Guess
+                    </p>
+                    <p class="random">
+                        <p>Wins</p>
+                        <p class="wins"></p>
+                        <p>Losses</p>
+                        <p class="losses">
+
+                        </p>
+                </div>
+
+
+                </p>
+            </div>
+            <div class="col-1">
+
+            </div>
+            <div class="col-5">
+                <p class="userGuess"></p>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var targetNum = Math.floor(Math.random(19, 100) * (100 - 19) + 19);
+            var counter = 0;
+            // var losses = 0;
+            // $(".losses").text(losses);
+            // var wins = 0;
+            // $(".wins").text(wins);
+
+            var box1 = Math.floor(Math.random() * 10) + 1;
+            var box2 = Math.floor(Math.random() * 10) + 1;
+            var box3 = Math.floor(Math.random() * 10) + 1;
+            var box4 = Math.floor(Math.random() * 10) + 1;
+
+            // $("#box1").on("click", function () {
+            //     ($(this).attr("#box1"));
+            //     var userGuess = box1;
+            //     // console.log('box1', box1);
+            //     counter += userGuess;
+            //     $(".userGuess").text(counter);
+            //     console.log(counter);
+            // });
+
+            // $("#box2").on("click", function () {
+            //     ($(this).attr("#box2"));
+            //     var userGuess = box2;
+            //     counter += userGuess;
+            //     $(".userGuess").text(counter);
+            //     console.log('box2', box2);
+            // });
+
+            // $("#box3").on("click", function () {
+            //     ($(this).attr("#box3"));
+            //     var userGuess = box3;
+            //     counter += userGuess;
+            //     $(".userGuess").text(counter);
+            //     console.log('box3', box3);
+            // });
+
+            // $("#box4").on("click", function () {
+            //     ($(this).attr("#box4"));
+            //     var userGuess = box4;
+            //     counter += userGuess;
+            //     $(".userGuess").text(counter);
+            //     console.log('box4', box4);
+            // });
+
+            $(".box").on("click", function (event) {
+                // ($(this).attr(".box"));
+                var userGuess;
+                if (event.target.id === 'box1') {
+                    userGuess = box1;
+                } else if (event.target.id === 'box2') {
+                    userGuess = box2;
+                } else if (event.target.id === 'box3') {
+                    userGuess = box3;
+                } else {
+                    userGuess = box4;
+                }
+                counter += userGuess;
+                // console.log('BoxID: ', event.target.id, 'userGuess: ', userGuess, 'counter: ', counter);
+                $(".userGuess").text(counter);
+                var wins = 0;
+                var losses = 0;
+                $(".losses").text(losses);
+                $(".wins").text(wins);
+                $(".random").text(targetNum);
+                if (counter === targetNum) {
+                    wins++;
+                    counter = 0;
+                    targetNum = Math.floor(Math.random(19, 100) * (100 - 19) + 19);
+                    console.log("wins", wins);
+                } else if (counter > targetNum) {
+                    losses++;
+                    counter = 0;
+                    targetNum = Math.floor(Math.random(19, 100) * (100 - 19) + 19);
+                    console.log("loss", losses);
+                }
+            });
+            // box1 = parseInt(box1);
+            // box2 = parseInt(box2);
+            // box3 = parseInt(box3);
+            // box4 = parseInt(box4);
+        });
+    </script>
+
+</body>
+
+</html>

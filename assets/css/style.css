@@ -1,0 +1,25 @@
+body{
+    /* background-image: url(http://hugoware.net/resource/images/misc/game-background.jpg); */
+    background-image: url(https://slifty.com/wp-content/uploads/2011/08/1.jpg);
+    
+}
+#mario{
+    height: 150px;
+    width: 150px;
+}
+img{
+    height: 150px;
+    width: 150px;
+}
+
+#coin{
+    height: 150px;
+    width: 150px;
+}
+.col-5{
+    height: 250px;
+    width: 250px;
+    background-color: #4e7a23;
+    margin-top: 25px;
+    border: solid 10px #325015;
+}
