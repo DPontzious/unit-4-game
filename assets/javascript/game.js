@@ -1,44 +1,38 @@
-// var counter = 0;
-// var wins = 0;
-// var losses = 0;
-// var userCount = 0;
-
-// var targetNum = Math.floor(Math.random() * 100);
-// console.log(targetNum);
-
-// $("img1").on("click") = function(event){
-//     event = Math.floor(Math.random() * 12 + 1);
-// }
-
-// var box1 = event.key;
-// console.log(box1);
-
-// // ("#img1").on("click", function () {
-// //     userCount++;
-// //     console.log(userCount);
-// // });
-// // $("img2").on("click", function(){
-// //     userCount++;
-// // // },
-// //     document.getElementById("wins").innerHTML = wins;
-// //     document.getElementById("losses").innerHTML = losses;
-// //     document.getElementById('counter').innerHTML = counter;
-// //     document.getElementById('guess').innerHTML = user;
-// document.getElementById('img1').innerHTML = box1;
-
-// var numOption = Math.floor(Math.random() * 12) + 1;
-// console.log(numOption);
-
-// var counter = 
-
-// for (var i = 0; i < numOption.length; i++){
-
-
-// var 
-
-// if (counter === targetNum){
-//     wins++
-// }
-// else (counter >= targetNum){
-//     losses++;
-// }
+$(document).ready(function () {
+    var targetNum = Math.floor(Math.random(19, 100) * (100 - 19) + 19);
+    var counter = 0;
+    var losses = 0;
+    var wins = 0;
+    var box1 = Math.floor(Math.random() * 10) + 1;
+    var box2 = Math.floor(Math.random() * 10) + 1;
+    var box3 = Math.floor(Math.random() * 10) + 1;
+    var box4 = Math.floor(Math.random() * 10) + 1;
+    $(".box").on("click", function (event) {
+        var userGuess;
+        if (event.target.id === 'box1') {
+            userGuess = box1;
+        } else if (event.target.id === 'box2') {
+            userGuess = box2;
+        } else if (event.target.id === 'box3') {
+            userGuess = box3;
+        } else {
+            userGuess = box4;
+        }
+        counter += userGuess;
+        $(".userGuess").text(counter);
+        $(".random").text(targetNum);
+        if (counter === targetNum) {
+            wins++;
+            counter = 0;
+            targetNum = Math.floor(Math.random(19, 120) * (120 - 19) + 19);
+            console.log("wins", wins);
+        } else if (counter > targetNum) {
+            losses++;
+            counter = 0;
+            targetNum = Math.floor(Math.random(19, 120) * (120 - 19) + 19);
+            console.log("loss", losses);
+        }
+        $(".losses").text(losses);
+        $(".wins").text(wins);
+    });
+});

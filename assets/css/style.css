@@ -1,8 +1,8 @@
 body{
-    /* background-image: url(http://hugoware.net/resource/images/misc/game-background.jpg); */
-    background-image: url(https://slifty.com/wp-content/uploads/2011/08/1.jpg);
-    
-}
+    background-image: url(http://hugoware.net/resource/images/misc/game-background.jpg);
+    background-size: 90%;
+   
+} 
 #mario{
     height: 150px;
     width: 150px;
@@ -11,9 +11,17 @@ img{
     height: 150px;
     width: 150px;
 }
-
-#coin{
-    height: 150px;
+.box{
+    background-color: white;
+    margin-top: 20px;
+    border: solid black 5px;
+}
+.instr{
+    margin: 10px;
+}
+#mario{
+    align-content: flex-end;
+    height: 200px;
     width: 150px;
 }
 .col-5{
@@ -22,4 +30,26 @@ img{
     background-color: #4e7a23;
     margin-top: 25px;
     border: solid 10px #325015;
+}
+#coin{
+    background-color: #4e7a23;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    margin-top : 10px;
+}
+#numToGuess{
+    font-size : 30px;
+    color: #eca555;
+    margin-left: 10px;
+}
+.random{
+    font-size: 30px;
+    color: #eca555;
+    
+}
+.wins{
+    font-size: 30px;
+    color : #eca555;
 }
