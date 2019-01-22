@@ -19,12 +19,18 @@
             <div class="col-md-11">
                 <div class="box">
                     <div class="instr">
-                        Number Gussing Game.
-                        You will be given a random number at the start of the game.
-                        There are four question boxes below, by clicking on the box you will add a specific amount of
-                        points to your total score.
-                        You win by matching your total score to the random number, you lose if your score goes above
-                        the random number.
+                        <h3>
+                             <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin">
+                              <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin">
+                               <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin">
+                             Coin Collecting Challenge
+                              <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin">
+                               <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin">
+                                <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin">
+                        </h5>
+                        Bowser has challenged Mario to a coin collecting game. Click any of the four boxes below to
+                        collect coins. Each box contains a specific amount of coins. If Marios score is the same as
+                        Bowsers you win! But be careful if Mario collect more coins than Bowser you lose.
                     </div>
 
                 </div>
@@ -46,34 +52,44 @@
         </div>
         <div class="row">
             <div class="col-5">
+
                 <div class="row">
-                    <p id="numToGuess">
-                        Number to Guess
-                        <br>
-                        <p class="random"></p>
-                        <p class="userGuess">
-                        </p>
-                        <p>Losses </p>
-                        <p class="losses">
-                        </p>
+                    <div class="col">
+                        <img id="bowser" src="assets/images/bowser.png" alt="bowser">
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <p id="numToGuess">Bowsers Coins</p>
+                            <p class="random"></p>
+                        </div>
+                        <div class="row">
+                            <p id="numToGuess"> Losses <br>
+                                <p class="losses"></p>
+                        </div>
+                    </div>
                 </div>
-                </p>
             </div>
             <div class="col-1">
             </div>
             <div class="col-5">
                 <div class="row">
                     <div class="col">
-                        <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin">
+                        <div class="row">
+                            <p id="numToGuess1">Marios Coins <br></p> 
+                            <p class="userGuess"></p>
+                        </div>
+                        <div class="row">
+                            <p id="numToGuess1"> Wins <br>
+                                <p class="wins"></p>
+                        </div>
                     </div>
-                
-                <p id="numToGuess"> Wins <br>
-                    <p class="wins"></p>
-                </p>
-                <img id="mario" src="assets/images/3DS_Mario.png" alt="marioPlant">
-</div>
+                    <div class="col">
+                        <img id="mario" src="assets/images/3DS_Mario.png" alt="marioPlant">
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- <img id="coin" src="assets/images/QuestionCoin.png" alt="marioCoin"> -->
         <script type="text/javascript" src="assets/javascript/game.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">

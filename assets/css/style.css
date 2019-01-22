@@ -3,6 +3,9 @@ body{
     background-size: 90%;
    
 } 
+h3{
+    text-align: center;
+}
 #mario{
     height: 150px;
     width: 150px;
@@ -12,7 +15,7 @@ img{
     width: 150px;
 }
 .box{
-    background-color: white;
+    background-color: #6ea34b;
     margin-top: 20px;
     border: solid black 5px;
 }
@@ -20,9 +23,15 @@ img{
     margin: 10px;
 }
 #mario{
-    align-content: flex-end;
     height: 200px;
     width: 150px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#bowser{
+    height: 224px;
+    width: 219px;
+
 }
 .col-5{
     height: 250px;
@@ -32,14 +41,17 @@ img{
     border: solid 10px #325015;
 }
 #coin{
-    background-color: #4e7a23;
+   
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-left: 15px;
+    width: 50px;
+    height: 50px;
     margin-top : 10px;
 }
 #numToGuess{
+    font-size : 30px;
+    color: #eca555;
+}
+#numToGuess1{
     font-size : 30px;
     color: #eca555;
     margin-left: 10px;
@@ -52,4 +64,12 @@ img{
 .wins{
     font-size: 30px;
     color : #eca555;
+}
+.losses{
+    font-size: 30px;
+    color : #eca555; 
+}
+.userGuess{
+    font-size: 30px;
+    color : #eca555; 
 }
